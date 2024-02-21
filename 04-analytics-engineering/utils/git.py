@@ -50,6 +50,7 @@ def obtener_enlaces_descarga_filtrados(usuario, repositorio, id_release, patron,
     # Imprimir los enlaces de descarga
     for enlace in enlaces_filtrados:
         print(enlace)
+    print(enlaces_filtrados)
 
     return enlaces_filtrados
 
@@ -61,10 +62,11 @@ if __name__ == "__main__":
     release_green = 71979983
     release_fhv = 72017740
     patron = r"2019|2020"
+    patron_fhv = r"2019"
 
     releases = get_releases (usuario,repositorio)
 
-    enlaces_filtrados = obtener_enlaces_descarga_filtrados(usuario, repositorio, release_yellow, patron)
-    enlaces_filtrados = obtener_enlaces_descarga_filtrados(usuario, repositorio, release_green, patron)
-    enlaces_filtrados = obtener_enlaces_descarga_filtrados(usuario, repositorio, release_fhv, patron)
+    # enlaces_filtrados = obtener_enlaces_descarga_filtrados(usuario, repositorio, release_yellow, patron)
+    # enlaces_filtrados = obtener_enlaces_descarga_filtrados(usuario, repositorio, release_green, patron)
+    enlaces_filtrados = obtener_enlaces_descarga_filtrados(usuario, repositorio, release_fhv, patron_fhv)
 
