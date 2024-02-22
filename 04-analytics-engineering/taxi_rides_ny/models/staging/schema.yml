@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging
+    database: striking-retina-412711
+    schema: taxi_rides_ny
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: raw_green_tripdata
+      - name: raw_yellow_tripdata
+      - name: raw_fhv_tripdata
+         # freshness:
+           # error_after: {count: 6, period: hour}
+
+
