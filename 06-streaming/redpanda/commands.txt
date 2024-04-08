@@ -1,0 +1,5 @@
+rpk version
+
+rpk topic create test-topic
+
+rpk topic create green-trips
